@@ -1,6 +1,8 @@
 import json
 import requests
 from pprint import pprint
+import pathlib
+here = pathlib.Path(__file__).parent.absolute()
 
 INDEX_URL = "http://localhost:9200/dr2"
 
@@ -137,7 +139,7 @@ def get_challenges():
 
 challenges = get_challenges()
 print("> building", len(challenges.keys()), "challengues... challenges_db.json")
-f = open("jsondb/challenges_db.json", "w")
+f = open(f"{here}/jsondb/challenges_db.json", "w")
 f.write(json.dumps(challenges, indent=2))
 f.close()
 

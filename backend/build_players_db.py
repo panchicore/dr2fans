@@ -1,6 +1,8 @@
 import json
 import requests
 from build_player_profile import get_user_records
+import pathlib
+here = pathlib.Path(__file__).parent.absolute()
 
 INDEX_URL = "http://localhost:9200/dr2"
 
@@ -71,14 +73,14 @@ for i, p in enumerate(players):
 
     if len(player_records.keys()) > 50:
         # print("> saving players page", page)
-        file = open(f"jsondb/players_data/players-{page}.json", "w")
+        file = open(f"{here}/jsondb/players_data/players-{page}.json", "w")
         file.write(json.dumps(player_records))
         file.close()
         page = page + 1
         player_records = {}
 
 
-file = open(f"jsondb/players_db.json", "w")
+file = open(f"{here}/jsondb/players_db.json", "w")
 file.write(json.dumps(players_db))
 file.close()
 
