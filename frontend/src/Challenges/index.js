@@ -16,8 +16,6 @@ export default function Challenges({ player }) {
   const playerChallenges = usePlayerChallenges(challenges, player);
   const [challenge, setChallenge] = React.useState();
 
-  console.log("playerChallenges", playerChallenges);
-
   if (playerChallenges.isLoading) {
     return <LinearProgress />;
   }

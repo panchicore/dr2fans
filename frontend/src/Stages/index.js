@@ -13,7 +13,7 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import _ from "lodash";
-import {green, grey, red} from "@material-ui/core/colors";
+import { green, grey, red } from "@material-ui/core/colors";
 import TrendingUpIcon from "@material-ui/icons/TrendingUp";
 import TrendingDownIcon from "@material-ui/icons/TrendingDown";
 import TrendingFlatIcon from "@material-ui/icons/TrendingFlat";
@@ -22,7 +22,6 @@ import AccessTimeIcon from "@material-ui/icons/AccessTime";
 
 export default function Stages({ stages }) {
   const values = _.values(stages);
-  console.log(values.length);
 
   const getTrendingIcon = (trend) => {
     if (trend === 0) {

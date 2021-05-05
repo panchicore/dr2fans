@@ -4,7 +4,6 @@ import Chart from "react-apexcharts";
 import _ from "lodash";
 
 export default function ChallengeStepLineChart({ challenge }) {
-  console.log(challenge);
   const ranks = challenge.charts.map((r) => r.y);
   const min = _.min(ranks);
   const max = _.max(ranks);
