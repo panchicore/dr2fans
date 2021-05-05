@@ -1,14 +1,22 @@
 import React from "react";
-import {hot} from "react-hot-loader/root";
+import { hot } from "react-hot-loader/root";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import {createMuiTheme, ThemeProvider} from "@material-ui/core/styles";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import {ReactQueryDevtools} from "react-query-devtools";
+import { ReactQueryDevtools } from "react-query-devtools";
 import Dashboard from "./Dashboard";
-import {useChallenges, usePlayerList} from "./hooks";
-import {AppContext} from "./contexts";
-import {AppBar, Box, CircularProgress, makeStyles, Toolbar, Typography,} from "@material-ui/core";
-import {red} from "@material-ui/core/colors";
+import { useChallenges, usePlayerList } from "./hooks";
+import { AppContext } from "./contexts";
+import {
+  AppBar,
+  Box,
+  CircularProgress,
+  makeStyles,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
+import { red } from "@material-ui/core/colors";
+import Footer from "./Footer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -69,6 +77,7 @@ function App() {
             </Toolbar>
           </AppBar>
           <Dashboard className={classes.appBarSpacer} />
+          <Footer />
         </AppContext.Provider>
       )}
 
