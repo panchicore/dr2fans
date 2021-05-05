@@ -46,8 +46,7 @@ def get_usernames():
         players = res['aggregations']['players']
         for bucket in players['buckets']:
             players_db.append({
-                "u": bucket['key']['username'],
-                "c": bucket['doc_count']
+                "u": bucket['key']['username']
             })
 
         after_key = players.get('after_key', None)
