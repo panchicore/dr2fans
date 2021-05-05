@@ -140,6 +140,6 @@ def get_challenges():
 challenges = get_challenges()
 print("> building", len(challenges.keys()), "challengues... challenges_db.json")
 f = open(f"{here}/jsondb/challenges_db.json", "w")
-f.write(json.dumps(challenges, indent=2))
+f.write(json.dumps(challenges))
 f.close()
 
