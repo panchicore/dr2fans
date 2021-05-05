@@ -7,7 +7,7 @@ function useChallenges() {
     "challenges",
     () => {
       return axios
-        .get("https://rallyfans-6504c.web.app/jsondb/challenges_db.json")
+        .get("https://dr2fans.web.app/jsondb/challenges_db.json")
         .then((res) => res.data);
     },
     {
@@ -21,7 +21,7 @@ function usePlayerList() {
     "players",
     () => {
       return axios
-        .get("https://rallyfans-6504c.web.app/jsondb/players_db.json")
+        .get("https://dr2fans.web.app/jsondb/players_db.json")
         .then((res) => res.data);
     },
     {
@@ -36,7 +36,7 @@ function usePlayerChallenges(challenges, player) {
     () => {
       return axios
         .get(
-          `https://rallyfans-6504c.web.app/jsondb/players_data/players-${player.p}.json`
+          `https://dr2fans.web.app/jsondb/players_data/players-${player.p}.json`
         )
         .then((res) => {
           const races = res.data[player.u];
